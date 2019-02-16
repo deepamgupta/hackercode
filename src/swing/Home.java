@@ -91,6 +91,7 @@ public class Home extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         searchTextField = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
         addStudentPanel = new javax.swing.JPanel();
         firstNameLabel = new javax.swing.JLabel();
         lastNameLabel = new javax.swing.JLabel();
@@ -107,31 +108,62 @@ public class Home extends javax.swing.JFrame {
         college = new javax.swing.JTextField();
         feestatus = new javax.swing.JTextField();
         addStudentButton1 = new javax.swing.JButton();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
         staffPanel = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         canvas3 = new java.awt.Canvas();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
         inventoryPanel = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         canvas4 = new java.awt.Canvas();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
         timingsPanel = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         canvas7 = new java.awt.Canvas();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
         attendencePanel = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         canvas9 = new java.awt.Canvas();
+        jLabel4 = new javax.swing.JLabel();
         accountPanel = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         canvas5 = new java.awt.Canvas();
+        jLabel29 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel43 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel44 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
         menuPanel = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         canvas6 = new java.awt.Canvas();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -475,7 +507,7 @@ public class Home extends javax.swing.JFrame {
         timeLabel.setText("currentTime");
         homePanel.add(timeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 170, 220, 60));
 
-        jTable1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTable1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {"Monday", "Poha, Jalebi", "Pav Bhaji", "Dosa"},
@@ -490,9 +522,15 @@ public class Home extends javax.swing.JFrame {
                 "Day", "Breakfast", "Lunch", "Dinner"
             }
         ));
+        jTable1.setRowHeight(30);
+        jTable1.setRowHeight(25);
         jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(2).setHeaderValue("Lunch");
+            jTable1.getColumnModel().getColumn(3).setHeaderValue("Dinner");
+        }
 
-        homePanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, 460, 140));
+        homePanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 930, 200));
 
         getContentPane().add(homePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 1030, 730));
 
@@ -529,6 +567,10 @@ public class Home extends javax.swing.JFrame {
 
         jButton1.setText("Fees Details");
         studentPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 110, 50));
+
+        jLabel28.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel28.setText("Search");
+        studentPanel.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
 
         getContentPane().add(studentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 1040, 720));
 
@@ -625,6 +667,30 @@ public class Home extends javax.swing.JFrame {
         });
         addStudentPanel.add(addStudentButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 421, 90, 35));
 
+        jPanel9.setBackground(new java.awt.Color(0, 153, 255));
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel24.setText("Add Student");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addContainerGap(405, Short.MAX_VALUE)
+                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        addStudentPanel.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 690, 40));
+
         getContentPane().add(addStudentPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1040, 660));
 
         staffPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -651,6 +717,48 @@ public class Home extends javax.swing.JFrame {
 
         staffPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 60));
         staffPanel.add(canvas3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, -1));
+
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing/images/icon.jpg"))); // NOI18N
+        staffPanel.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, -1, -1));
+
+        jLabel32.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel32.setText("Ramesh");
+        staffPanel.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, -1, 30));
+
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing/images/icon.jpg"))); // NOI18N
+        staffPanel.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, -1, -1));
+
+        jLabel34.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel34.setText("Suresh");
+        staffPanel.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, -1, 30));
+
+        jLabel35.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel35.setText("Bunty");
+        staffPanel.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 330, -1, 30));
+
+        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing/images/icon.jpg"))); // NOI18N
+        staffPanel.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 100, -1, -1));
+
+        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing/images/icon.jpg"))); // NOI18N
+        staffPanel.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, -1, -1));
+
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing/images/icon.jpg"))); // NOI18N
+        staffPanel.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 400, -1, -1));
+
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing/images/icon.jpg"))); // NOI18N
+        staffPanel.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 400, -1, -1));
+
+        jLabel40.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel40.setText("Ramu Kaka");
+        staffPanel.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 630, -1, 30));
+
+        jLabel41.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel41.setText("Ritesh");
+        staffPanel.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 630, -1, 30));
+
+        jLabel42.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel42.setText("Hemant");
+        staffPanel.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 630, -1, 30));
 
         getContentPane().add(staffPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 1030, 730));
 
@@ -679,6 +787,28 @@ public class Home extends javax.swing.JFrame {
         inventoryPanel.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 60));
         inventoryPanel.add(canvas4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, -1));
 
+        jTable2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Tomato", "25 kg"},
+                {"Cabbage", "20 kg"},
+                {"Maida", "20 kg"},
+                {"Sugar", "25 kg"},
+                {"Turmeric", "4 kg"},
+                {"Coriander", "----Required-----"},
+                {"Milk", "5 Litre (Warning)"},
+                {"Apple", "4 kg"},
+                {"Banana", "3 kg"}
+            },
+            new String [] {
+                "Items", "Quantity"
+            }
+        ));
+        jTable2.setRowHeight(30);
+        jScrollPane2.setViewportView(jTable2);
+
+        inventoryPanel.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 930, 340));
+
         getContentPane().add(inventoryPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 1030, 730));
 
         timingsPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -706,9 +836,21 @@ public class Home extends javax.swing.JFrame {
         timingsPanel.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 60));
 
         jLabel17.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
-        jLabel17.setText("Date");
-        timingsPanel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 110, 290, 60));
+        jLabel17.setText("Date : 17.02.19");
+        timingsPanel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 160, 290, 60));
         timingsPanel.add(canvas7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, -1));
+
+        jLabel25.setFont(new java.awt.Font("Arial", 0, 45)); // NOI18N
+        jLabel25.setText("Dinner : 7:00 pm to 9.30 pm");
+        timingsPanel.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 530, 640, 50));
+
+        jLabel26.setFont(new java.awt.Font("Arial", 0, 45)); // NOI18N
+        jLabel26.setText("Breakfast : 7:30 am to 9.30 am");
+        timingsPanel.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 640, 50));
+
+        jLabel27.setFont(new java.awt.Font("Arial", 0, 45)); // NOI18N
+        jLabel27.setText("Lunch : 12:00 am to 3 pm");
+        timingsPanel.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 420, 640, 50));
 
         getContentPane().add(timingsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 1030, 730));
 
@@ -737,6 +879,9 @@ public class Home extends javax.swing.JFrame {
         attendencePanel.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 60));
         attendencePanel.add(canvas9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, -1));
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing/images/attendence.png"))); // NOI18N
+        attendencePanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 730, 570));
+
         getContentPane().add(attendencePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 1030, 730));
 
         accountPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -752,7 +897,7 @@ public class Home extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(431, 431, 431)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(404, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -763,6 +908,54 @@ public class Home extends javax.swing.JFrame {
 
         accountPanel.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 60));
         accountPanel.add(canvas5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, -1));
+
+        jLabel29.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel29.setText("Current Username :");
+        accountPanel.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, -1, -1));
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        accountPanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 170, 310, 40));
+
+        jLabel31.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel31.setText("Current Password :");
+        accountPanel.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, -1, -1));
+
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        accountPanel.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 310, 40));
+
+        jLabel43.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel43.setText("New Username :");
+        accountPanel.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, -1, -1));
+
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+        accountPanel.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, 310, 40));
+
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
+        accountPanel.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, 310, 40));
+
+        jLabel44.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
+        jLabel44.setText("New Password :");
+        accountPanel.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, -1, -1));
+
+        jButton3.setFont(new java.awt.Font("Arial", 0, 24)); // NOI18N
+        jButton3.setText("Update Details");
+        accountPanel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 531, 200, 40));
 
         getContentPane().add(accountPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 1030, 730));
 
@@ -791,6 +984,30 @@ public class Home extends javax.swing.JFrame {
         menuPanel.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 60));
         menuPanel.add(canvas6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, -1));
 
+        jTable3.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Monday", "Poha, Jalebi", "Pav Bhaji", "Dosa"},
+                {"Tuesday", "poha, samosa", "Roti Sabji", "Dal Chawal"},
+                {"Wednesday", "chowmeeen", "Idli Sambar", "Continental"},
+                {"Thursday", "Khaman", "Aloo ke paranthe", "Mutter"},
+                {"Friday", "Poha, Jalebi", "Pav Bhaji", "Dosa"},
+                {"Saturday", "samosa", "Sabji", "Chawal"},
+                {"Sunday", "chowmeeen", "Sambar", null}
+            },
+            new String [] {
+                "Day", "Breakfast", "Lunch", "Dinner"
+            }
+        ));
+        jTable3.setRowHeight(25);
+        jScrollPane3.setViewportView(jTable3);
+        if (jTable3.getColumnModel().getColumnCount() > 0) {
+            jTable3.getColumnModel().getColumn(2).setHeaderValue("Lunch");
+            jTable3.getColumnModel().getColumn(3).setHeaderValue("Dinner");
+        }
+
+        menuPanel.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 930, 200));
+
         getContentPane().add(menuPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 1030, 730));
 
         pack();
@@ -805,6 +1022,7 @@ public class Home extends javax.swing.JFrame {
         timingsPanel.setVisible(false);
         accountPanel.setVisible(false);
         menuPanel.setVisible(false);
+        addStudentPanel.setVisible(false);
     }//GEN-LAST:event_homeLabelMousePressed
 
     private void studentLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_studentLabelMousePressed
@@ -816,6 +1034,8 @@ public class Home extends javax.swing.JFrame {
         timingsPanel.setVisible(false);
         accountPanel.setVisible(false);
         menuPanel.setVisible(false);
+                addStudentPanel.setVisible(false);
+
     }//GEN-LAST:event_studentLabelMousePressed
 
     private void staffLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_staffLabelMousePressed
@@ -828,6 +1048,8 @@ public class Home extends javax.swing.JFrame {
         timingsPanel.setVisible(false);
         accountPanel.setVisible(false);
         menuPanel.setVisible(false);
+                addStudentPanel.setVisible(false);
+
     }//GEN-LAST:event_staffLabelMousePressed
 
     int xx, xy;
@@ -881,6 +1103,8 @@ public class Home extends javax.swing.JFrame {
         timingsPanel.setVisible(false);
         accountPanel.setVisible(false);
         menuPanel.setVisible(false);
+                addStudentPanel.setVisible(false);
+
 
     }//GEN-LAST:event_studentButtonMousePressed
 
@@ -893,6 +1117,8 @@ public class Home extends javax.swing.JFrame {
         timingsPanel.setVisible(false);
         accountPanel.setVisible(false);
         menuPanel.setVisible(false);
+                addStudentPanel.setVisible(false);
+
     }//GEN-LAST:event_inventoryLabelMousePressed
 
     private void attendenceLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_attendenceLabelMousePressed
@@ -904,6 +1130,8 @@ public class Home extends javax.swing.JFrame {
         timingsPanel.setVisible(false);
         accountPanel.setVisible(false);
         menuPanel.setVisible(false);
+                addStudentPanel.setVisible(false);
+
     }//GEN-LAST:event_attendenceLabelMousePressed
 
     private void timingLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_timingLabelMousePressed
@@ -915,6 +1143,8 @@ public class Home extends javax.swing.JFrame {
         timingsPanel.setVisible(true);
         accountPanel.setVisible(false);
         menuPanel.setVisible(false);
+                addStudentPanel.setVisible(false);
+
     }//GEN-LAST:event_timingLabelMousePressed
 
     private void accountLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountLabelMousePressed
@@ -926,6 +1156,8 @@ public class Home extends javax.swing.JFrame {
         timingsPanel.setVisible(false);
         accountPanel.setVisible(true);
         menuPanel.setVisible(false);
+                addStudentPanel.setVisible(false);
+
     }//GEN-LAST:event_accountLabelMousePressed
 
     private void menuPanel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_menuPanel1MousePressed
@@ -945,6 +1177,8 @@ public class Home extends javax.swing.JFrame {
         timingsPanel.setVisible(false);
         accountPanel.setVisible(false);
         menuPanel.setVisible(true);
+                addStudentPanel.setVisible(false);
+
     }//GEN-LAST:event_menulabelmousepressed
 
     private void jLabel8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MousePressed
@@ -1020,6 +1254,22 @@ public class Home extends javax.swing.JFrame {
             Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
         }    }//GEN-LAST:event_addStudentButton1ActionPerformed
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
     private void setColor(JPanel pane) {
         pane.setBackground(new Color(41, 57, 80));
     }
@@ -1061,6 +1311,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel inventoryLabel;
     private javax.swing.JPanel inventoryPanel;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1077,7 +1328,29 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1092,8 +1365,17 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     private javax.swing.JLabel lastNameLabel;
     private javax.swing.JTextField lname;
     private javax.swing.JPanel menuPanel;
