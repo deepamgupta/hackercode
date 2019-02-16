@@ -1,6 +1,8 @@
 
 package swing;
 
+import javax.swing.JOptionPane;
+
 
 public class login extends javax.swing.JFrame {
 
@@ -23,7 +25,6 @@ public class login extends javax.swing.JFrame {
         loginButton = new java.awt.Button();
         resetButton = new java.awt.Button();
         usernameTextField = new java.awt.TextField();
-        jLabel6 = new javax.swing.JLabel();
         passwordTextField = new javax.swing.JPasswordField();
         jLabel4 = new javax.swing.JLabel();
 
@@ -72,6 +73,11 @@ public class login extends javax.swing.JFrame {
 
         resetButton.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
         resetButton.setLabel("Reset");
+        resetButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetButtonActionPerformed(evt);
+            }
+        });
 
         usernameTextField.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
         usernameTextField.addActionListener(new java.awt.event.ActionListener() {
@@ -79,9 +85,6 @@ public class login extends javax.swing.JFrame {
                 usernameTextFieldActionPerformed(evt);
             }
         });
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setText("forgot password? click here");
 
         passwordTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,7 +112,6 @@ public class login extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                         .addComponent(resetButton, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(usernameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(passwordTextField))
                 .addContainerGap(64, Short.MAX_VALUE))
         );
@@ -130,9 +132,7 @@ public class login extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(loginButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(resetButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(152, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 50, 490, 560));
@@ -158,17 +158,17 @@ public class login extends javax.swing.JFrame {
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         
          
-           new Home().setVisible(true);
-            dispose();
+          
         String username = usernameTextField.getText();
-        char[] password = passwordTextField.getPassword();
-        System.out.println(passwordTextField.getPassword().equals("abc"));
-        if(username.equals("hackercode") && password.toString().equals("hackercode")){
-        
+        String password = passwordTextField.getText();
+       
+        if(username.equals("hackercode") && password.equals("hackercode")){
+             new Home().setVisible(true);
+            dispose();
         }
         
         else{
-            
+            JOptionPane.showMessageDialog(this, "Invalid Credentials");
         }
     }//GEN-LAST:event_loginButtonActionPerformed
 
@@ -179,6 +179,11 @@ public class login extends javax.swing.JFrame {
     private void usernameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameTextFieldActionPerformed
+
+    private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
+passwordTextField.setText("");
+usernameTextField.setText("");
+    }//GEN-LAST:event_resetButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -221,7 +226,6 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private java.awt.Button loginButton;
