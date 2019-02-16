@@ -686,19 +686,16 @@
                       <Renderer/>
                     </Column>
                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                      <Title value="Lunch"/>
+                      <Title/>
                       <Editor/>
                       <Renderer/>
                     </Column>
                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
-                      <Title value="Dinner"/>
+                      <Title/>
                       <Editor/>
                       <Renderer/>
                     </Column>
                   </TableColumnModel>
-                </Property>
-                <Property name="rowHeight" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="30" type="code"/>
                 </Property>
                 <Property name="rowHeight" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="25" type="code"/>
@@ -1584,18 +1581,156 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
-          <Properties>
-            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/swing/images/attendence.png"/>
-            </Property>
-          </Properties>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="150" y="130" width="730" height="570"/>
+              <AbsoluteConstraints x="50" y="270" width="930" height="300"/>
             </Constraint>
           </Constraints>
-        </Component>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTable" name="jTable4">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Arial" size="18" style="0"/>
+                </Property>
+                <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+                  <Table columnCount="5" rowCount="16">
+                    <Column editable="true" title="StudentID" type="java.lang.Object">
+                      <Data value="101"/>
+                      <Data value="102"/>
+                      <Data value="103"/>
+                      <Data value="104"/>
+                      <Data value="105"/>
+                      <Data value="106"/>
+                      <Data value="107"/>
+                      <Data value="108"/>
+                      <Data value="109"/>
+                      <Data value="110"/>
+                      <Data value="111"/>
+                      <Data value="112"/>
+                      <Data value="113"/>
+                      <Data value="114"/>
+                      <Data value="115"/>
+                      <Data value="116"/>
+                    </Column>
+                    <Column editable="true" title="Name" type="java.lang.Object">
+                      <Data value="Ravi"/>
+                      <Data value="Kishan"/>
+                      <Data value="Raju"/>
+                      <Data value="Bunty"/>
+                      <Data value="Babli"/>
+                      <Data value="Pratik"/>
+                      <Data value="Sahu"/>
+                      <Data value="Virat"/>
+                      <Data value="Sarthak"/>
+                      <Data value="Vimal"/>
+                      <Data value="Suresh"/>
+                      <Data value="Ramesh"/>
+                      <Data value="Ragini"/>
+                      <Data value="Kamal"/>
+                      <Data value="Priya"/>
+                      <Data value="Payal"/>
+                    </Column>
+                    <Column editable="true" title="Breakfast" type="java.lang.Object">
+                      <Data value="P"/>
+                      <Data value="A"/>
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="A"/>
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="A"/>
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="A"/>
+                      <Data value="A"/>
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="A"/>
+                    </Column>
+                    <Column editable="true" title="Lunch" type="java.lang.Object">
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="A"/>
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="A"/>
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="A"/>
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="A"/>
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="A"/>
+                    </Column>
+                    <Column editable="true" title="Dinner" type="java.lang.Object">
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="A"/>
+                      <Data value="A"/>
+                      <Data value="P"/>
+                      <Data value="A"/>
+                      <Data value="A"/>
+                      <Data value="P"/>
+                      <Data value="A"/>
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="A"/>
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="P"/>
+                      <Data value="null"/>
+                    </Column>
+                  </Table>
+                </Property>
+                <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
+                  <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
+                  </TableColumnModel>
+                </Property>
+                <Property name="rowHeight" type="int" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="25" type="code"/>
+                </Property>
+                <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
+                  <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
+                </Property>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="accountPanel">

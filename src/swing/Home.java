@@ -144,7 +144,8 @@ public class Home extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         canvas9 = new java.awt.Canvas();
-        jLabel4 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
         accountPanel = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
@@ -522,13 +523,8 @@ public class Home extends javax.swing.JFrame {
                 "Day", "Breakfast", "Lunch", "Dinner"
             }
         ));
-        jTable1.setRowHeight(30);
         jTable1.setRowHeight(25);
         jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(2).setHeaderValue("Lunch");
-            jTable1.getColumnModel().getColumn(3).setHeaderValue("Dinner");
-        }
 
         homePanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, 930, 200));
 
@@ -879,8 +875,34 @@ public class Home extends javax.swing.JFrame {
         attendencePanel.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 60));
         attendencePanel.add(canvas9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/swing/images/attendence.png"))); // NOI18N
-        attendencePanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 730, 570));
+        jTable4.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"101", "Ravi", "P", "P", "P"},
+                {"102", "Kishan", "A", "P", "P"},
+                {"103", "Raju", "P", "A", "A"},
+                {"104", "Bunty", "P", "P", "A"},
+                {"105", "Babli", "P", "P", "P"},
+                {"106", "Pratik", "A", "A", "A"},
+                {"107", "Sahu", "P", "P", "A"},
+                {"108", "Virat", "P", "P", "P"},
+                {"109", "Sarthak", "A", "A", "A"},
+                {"110", "Vimal", "P", "P", "P"},
+                {"111", "Suresh", "P", "P", "P"},
+                {"112", "Ramesh", "A", "A", "A"},
+                {"113", "Ragini", "A", "P", "P"},
+                {"114", "Kamal", "P", "P", "P"},
+                {"115", "Priya", "P", "P", "P"},
+                {"116", "Payal", "A", "A", null}
+            },
+            new String [] {
+                "StudentID", "Name", "Breakfast", "Lunch", "Dinner"
+            }
+        ));
+        jTable4.setRowHeight(25);
+        jScrollPane4.setViewportView(jTable4);
+
+        attendencePanel.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 930, 300));
 
         getContentPane().add(attendencePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, 1030, 730));
 
@@ -1345,7 +1367,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
@@ -1369,9 +1390,11 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
